@@ -3,7 +3,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
+nvm install 10
+nvm use 10
+npm install -g yarn@1.21.1
 In the project directory, you can run:
 
 ### `yarn start`

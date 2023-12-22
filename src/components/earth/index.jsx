@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import * as THREE from "three";
-
 import EarthDayMap from "../../assets/textures/8k_earth_daymap.jpg";
 import EarthNormalMap from "../../assets/textures/8k_earth_normal_map.jpg";
 import EarthSpecularMap from "../../assets/textures/8k_earth_specular_map.jpg";
@@ -27,7 +26,6 @@ export function Earth(props) {
 
   return (
     <>
-      {/* <ambientLight intensity={1} /> */}
       <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
       <Stars
         radius={300}
@@ -56,15 +54,15 @@ export function Earth(props) {
           metalness={0.4}
           roughness={0.7}
         />
-        {/* <OrbitControls
-          enableZoom={true}
-          enablePan={true}
-          enableRotate={true}
-          zoomSpeed={0.6}
-          panSpeed={0.5}
-          rotateSpeed={0.4}
-        /> */}
       </mesh>
+      <OrbitControls
+        enableZoom={true}
+        enablePan={true}
+        enableRotate={true}
+        zoomSpeed={0.6}
+        panSpeed={0.5}
+        rotateSpeed={0.4}
+      />
     </>
   );
 }
